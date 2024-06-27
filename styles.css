@@ -312,3 +312,23 @@ footer {
     object-fit:scale-down; /* Adjust this to 'contain' for different fit */
     object-position: center; /* Center the image */
 }
+
+/* Responsive Navigation */
+@media (max-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        flex: 1 1 100%; /* Allow the items to take full width */
+        text-align: center; /* Center the items */
+        margin: 5px 0; /* Space between items */
+    }
+
+    /* Ensure only the last two items are in the second row */
+    nav ul li:nth-last-child(-n+) {
+        flex: 1 1 45%; /* Adjust width for better spacing */
+    }
+}

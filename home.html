@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANCITY</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/SANCITY.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="home.html"><img src="/assets/images/SANCITY.png" alt="Logo"></a>
+            </div>
+            
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="rsp.html">Recruitment, Selection and Placement</a></li>|
+                <li><a href="pms.html">Performance Management System</a></li>|
+                <li><a href="lnd.html">Learning and Development</a></li>|
+                <li><a href="rnr.html">Rewards and Recognition</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/assets/images/car1.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/images/car2.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/images/car3.jpg" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/images/car4.jpg" alt="Image 4">
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/images/car5.jpg" alt="Image 5">
+            </div>
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <hr>
+    <article class="article container">
+        <header>
+            <h2 class="article-title">WHAT IS SANCITY?</h2>
+        </header>
+    <div class="article-content container">
+        <p><strong>SANCITY</strong>, or the Simplified Access and Network to Centralized personnel Information-bank Truly Yielding, is an advanced personnel information management system designed to complement the PERSONIS framework by filling any data gaps and providing top management with a comprehensive, centralized dashboard. It seamlessly integrates with various databases, including Google Sheets, ensuring that all relevant personnel information is accessible and organized in one place. This enables quick, accurate, and efficient retrieval of critical data, enhancing decision-making processes at the highest levels of the organization.</p>
+    </div>
+    </article>
+    <main>
+        <article class="article container">
+            <header>
+                <h2 class="article-title">PRIME-HRM PILLARS</h2>
+            </header>
+        <div class="container">
+            <p><div class="button-container">
+                <a href="rsp.html"><img src="assets/images/rsp.png" alt="Button 1"></a>
+                <a href="pms.html"><img src="assets/images/pms.png" alt="Button 2"></a>
+                <a href="lnd.html"><img src="assets/images/lnd.png" alt="Button 3"></a>
+                <a href="rnr.html"><img src="assets/images/rnr.png" alt="Button 4"></a>
+            </div></p>
+        </div>
+        </article>
+    </br>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SDO Santiago City PRIME-HR. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Check if the user is logged in
+        if (sessionStorage.getItem('loggedIn') !== 'true') {
+            window.location.href = 'index.html'; // Redirect to login page
+        }
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

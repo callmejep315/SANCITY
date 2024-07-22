@@ -40,13 +40,13 @@
     </div>
     </article>
     <main>
-        <article class="article container">
+        <article id="rnr-content" class="article container hidden">
             <header>
                 <h2 class="article-title">R&R Contents</h2>
             </header>
         <div class="container">
             <section>
-
+                <br>
                 <div class="button2-container">
                     <a href="https://depedph-my.sharepoint.com/:f:/g/personal/jaylord_gallarde_deped_gov_ph/EkQlPz8flMJLomFJbwpPuo4BC9MT8LZ10Z2om4G2KJ5pmA?e=b2hlHc" target="_blank"><button>Evidence Requirements for R&R</button></a>
                     <a href="assets/images/rnrfw.jpg" target="_blank"><button>R&R Framework</button></a>
@@ -68,6 +68,11 @@
                 <button>BACK TO HOME</button>
             </a>
         </div>
+        <div class="back">
+            <a href="home.html">
+                <button class="logout-button" onclick="logout()">LOGOUT</button>
+            </a>
+        </div>
     </div>
     </br>
     </main>
@@ -77,10 +82,46 @@
         </div>
     </footer>
     <script>
-        // Check if the user is logged in
-        if (sessionStorage.getItem('loggedIn') !== 'true') {
-            window.location.href = 'index.html'; // Redirect to login page
-        }
+        document.addEventListener("DOMContentLoaded", function() {
+            const loggedIn = sessionStorage.getItem('loggedIn');
+            const username = sessionStorage.getItem('username');
+
+            // Debugging statements
+            console.log('loggedIn:', loggedIn);
+            console.log('username:', username);
+
+            // Check if the user is logged in
+            if (loggedIn !== 'true') {
+                window.location.href = 'index.html'; // Redirect to login page
+            } else {
+
+                // Hide or show content based on username
+                if (username === 'R&R') {
+                    const rnrContent = document.getElementById('rnr-content');
+                    if (rnrContent) {
+                        rnrContent.classList.remove('hidden');
+                        console.log('rnr-content is now visible');
+                    }
+                } else if (username === 'admin') {
+                    const rnrContent = document.getElementById('rnr-content');
+                    if (rnrContent) {
+                        rnrContent.classList.remove('hidden');
+                        console.log('rnr-content is now visible');
+                    }
+                } else if (username === 'topman') {
+                    const rnrContent = document.getElementById('rnr-content');
+                    if (rnrContent) {
+                        rnrContent.classList.remove('hidden');
+                        console.log('rnr-content is now visible');
+                    }
+                }
+                // Add more conditions for other usernames if needed
+
+                // Debugging: Log elements visibility status
+                console.log(`user1-content hidden: ${document.getElementById('user1-content').classList.contains('hidden')}`);
+                console.log(`user2-content hidden: ${document.getElementById('user2-content').classList.contains('hidden')}`);
+            }
+        });
     </script>
     <script src="scripts.js"></script>
 </body>

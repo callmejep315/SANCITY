@@ -37,3 +37,7 @@ window.addEventListener('load', function () {
     }, 2000); // Splash screen display duration (milliseconds)
 });
 
+function logout() {
+    sessionStorage.clear();
+    window.location.href = 'index.html';
+}

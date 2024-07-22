@@ -6,10 +6,10 @@ function login() {
     const validCredentials = [
         { username: 'admin', password: '123456789' },
         { username: 'topman', password: 'sdosantiagocity' },
-        { username: 'rsp', password: 'recruitment' },
-        { username: 'pms', password: 'performance' },
-        { username: 'lnd', password: 'learning' },
-        { username: 'rnr', password: 'rewards' },
+        { username: 'RSP', password: 'recruitment' },
+        { username: 'PMS', password: 'performance' },
+        { username: 'L&D', password: 'learning' },
+        { username: 'R&R', password: 'rewards' },
 
     ];
 
@@ -20,8 +20,16 @@ function login() {
 
     if (isValid) {
         sessionStorage.setItem('loggedIn', 'true'); // Set session storage
+        sessionStorage.setItem('username', usernameInput); // Store username
         window.location.href = 'home.html';
     } else {
         document.getElementById('error-message').style.display = 'block';
     }
+}
+
+function loginAsGuest() {
+    const guestUsername = 'guest';
+    sessionStorage.setItem('loggedIn', 'true');
+    sessionStorage.setItem('username', guestUsername);
+    window.location.href = 'home.html';
 }

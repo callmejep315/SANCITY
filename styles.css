@@ -145,33 +145,54 @@ h2 {
     box-shadow: 0 0 0 2px white, 0 0 0 4px #ce1b33;
 }
 
+/* General Button Container Styles */
 .button2-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px; /* Adjust the gap between buttons as needed */
+    justify-content: center; /* Center the grid within the container */
+}
+
+.button2-container a {
+    text-decoration: none;
 }
 
 .button2-container button {
-    background-color: #6a1b9a;
-    color: white;
-    font-weight: bold;
+    width: 200px; /* Fixed width for larger squares */
+    height: 100px; /* Fixed height to maintain the square shape */
     border: none;
-    border-radius: 15px;
-    padding: 15px 30px; /* Increased padding */
-    font-size: 1.2em; /* Larger font size */
+    background-color: #7b1fa2;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .button2-container button:hover {
-    background-color: #7b1fa2;
+    background-color: #9c27b0;
 }
 
-.button2-container button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px white, 0 0 0 4px #6a1b9a;
+@media (max-width: 900px) {
+    .button2-container {
+        grid-template-columns: repeat(3, auto); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 700px) {
+    .button2-container {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+
+    .button2-container button {
+        width: 100%; /* Full width on very small screens */
+        height: 100px; /* Maintain aspect ratio */
+    }
 }
 
 /* Footer */
@@ -348,4 +369,8 @@ footer {
     nav ul li:nth-last-child(-n+) {
         flex: 1 1 45%; /* Adjust width for better spacing */
     }
+}
+
+.hidden {
+    display: none;
 }

@@ -7,6 +7,48 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="assets/images/SANCITY.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loggedIn = sessionStorage.getItem('loggedIn');
+            const username = sessionStorage.getItem('username');
+
+            // Debugging statements
+            console.log('loggedIn:', loggedIn);
+            console.log('username:', username);
+
+            // Check if the user is logged in
+            if (loggedIn !== 'true') {
+                window.location.href = 'index.html'; // Redirect to login page
+            } else {
+
+                // Hide or show content based on username
+                if (username === 'PMS') {
+                    const pmsContent = document.getElementById('pms-content');
+                    if (pmsContent) {
+                        pmsContent.classList.remove('hidden');
+                        console.log('pms-content is now visible');
+                    }
+                } else if (username === 'admin') {
+                    const pmsContent = document.getElementById('pms-content');
+                    if (pmsContent) {
+                        pmsContent.classList.remove('hidden');
+                        console.log('pms-content is now visible');
+                    }
+                } else if (username === 'topman') {
+                    const pmsContent = document.getElementById('pms-content');
+                    if (pmsContent) {
+                        pmsContent.classList.remove('hidden');
+                        console.log('pms-content is now visible');
+                    }
+                }
+                // Add more conditions for other usernames if needed
+
+                // Debugging: Log elements visibility status
+                console.log(`user1-content hidden: ${document.getElementById('user1-content').classList.contains('hidden')}`);
+                console.log(`user2-content hidden: ${document.getElementById('user2-content').classList.contains('hidden')}`);
+            }
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -44,13 +86,13 @@
     </div>
     </article>
     <main>
-        <article class="article container">
+        <article id="pms-content" class="article container hidden">
             <header>
                 <h2 class="article-title">PMS Contents</h2>
             </header>
         <div class="container">
             <section>
-
+                <br>
                 <div class="button2-container">
                     <a href="https://drive.google.com/drive/folders/1V3l2VYqNS3EeaMFl999a10iurX36iDTG" target="_blank"><button>Evidence Requirements for PMS</button></a>
                     <a href="pms-fw.html"><button>PMS Framework</button></a>
@@ -76,6 +118,11 @@
                 <button>BACK TO HOME</button>
             </a>
         </div>
+        <div class="back">
+            <a href="home.html">
+                <button class="logout-button" onclick="logout()">LOGOUT</button>
+            </a>
+        </div>
     </div>
     </br>
     </main>
@@ -84,12 +131,7 @@
             <p>&copy; 2024 SDO Santiago City PRIME-HR. All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        // Check if the user is logged in
-        if (sessionStorage.getItem('loggedIn') !== 'true') {
-            window.location.href = 'index.html'; // Redirect to login page
-        }
-    </script>
+
     <script src="scripts.js"></script>
 </body>
 </html>

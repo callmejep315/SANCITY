@@ -4,7 +4,7 @@ function login() {
 
     // Array of valid username and password pairs
     const validCredentials = [
-        { username: 'admin', password: '123456789' },
+        { username: 'admin', password: '123456789abc' },
         { username: 'topman', password: 'sdosantiagocity' },
         { username: 'RSP', password: 'recruitment' },
         { username: 'PMS', password: 'performance' },

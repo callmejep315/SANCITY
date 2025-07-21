@@ -30,12 +30,12 @@
     <article class="article container">
         <header>
             <h2 class="article-title">RECRUITMENT SELECTION AND PLACEMENT</h2>
-            <h3>Project EQUAL</h3>
-            <h3>(Enriched Qualitative and Quantitative Undertaking for Admirable Leaders)</h3>
+            <h3>Project CORE</h3>
+            <h3></h3>
             
         </header>
     <div class="article-content container">
-        <p><strong>The Project EQUAL</strong> is one of the programs to meet the criteria of the Program to Institutionalize Meritocracy and Excellence in Human Resource Management (PRIME-HRM). The Project EQUAL is important to ensure that school personnel, teaching and nonteaching shall guarantee steps to equitably enjoy the opportunities among teaching and nonteaching organizational effectiveness. Important details of the different Means of Verifications to be evaluated during the assessment of documents shall be provided by these localized guidelines on selection, promotion and appointment of teaching, related teaching and nonteaching personnel of the department</p>
+        <p><strong>The Project CORE</strong> is one of the programs to meet the criteria of the Program to Institutionalize Meritocracy and Excellence in Human Resource Management (PRIME-HRM). The Project CORE is important to ensure that school personnel, teaching and nonteaching shall guarantee steps to equitably enjoy the opportunities among teaching and nonteaching organizational effectiveness. Important details of the different Means of Verifications to be evaluated during the assessment of documents shall be provided by these localized guidelines on selection, promotion and appointment of teaching, related teaching and nonteaching personnel of the department</p>
         
     </div>
     </article>
@@ -48,13 +48,21 @@
             <section>
                 <br>
                 <div class="button2-container">
-                    <a href="https://depedph-my.sharepoint.com/personal/ricardo_cabugao_deped_gov_ph/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fricardo%5Fcabugao%5Fdeped%5Fgov%5Fph%2FDocuments%2FPRIME%20HRM%20Draft%2FPRIME%20HR%20Draft%2FRSP&ga=1" target="_blank"><button>Evidence Requirements for RSP</button></a>
+                    <a href="https://depedph-my.sharepoint.com/personal/ricardo_cabugao_deped_gov_ph/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fricardo%5Fcabugao%5Fdeped%5Fgov%5Fph%2FDocuments%2FPRIME%20HRM%20Draft%2FPRIME%20HR%20Draft%2FRSP&ga=1" target="_blank"><button>RSP Documents</button></a>
                 </div>
                     <hr>
 
                     <div class="button2-container">
                         <a href="https://psipop.dbm.gov.ph/gmis_agency/default.aspx" target="_blank"><button>PSIPOP (Website)</button></a>
                         <a href="https://drive.google.com/drive/folders/1LyTv3K0ipJ19S-Y_XBb4803234EgGdqY?usp=drive_link" target="_blank"><button>PSIPOP (SDO Santiago City)</button></a>
+                    </div> 
+                </section><br>
+                    <div class="button2-container">    
+                        <a href="https://inobtek.com/sdo-rsp/users/login" target="_blank"><button>Project EDGE - Admin Portal</button></a>
+                        <a href="https://inobtek.com/sdo-rsp/" target="_blank"><button>Project EDGE - Applicants</button></a>
+                        <a href="https://inobtek.com/sdo-personal-inventory/users/login" target="_blank"><button>Project HR PRISM - Personnel Inventory</button></a>
+                    </div>
+
                     </div>
                         <hr>
 
@@ -93,18 +101,18 @@
         </div>
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const loggedIn = sessionStorage.getItem('loggedIn');
-            const username = sessionStorage.getItem('username');
+    document.addEventListener("DOMContentLoaded", function() {
+        const loggedIn = localStorage.getItem('loggedIn');
+        const username = localStorage.getItem('username');
 
-            // Debugging statements
-            console.log('loggedIn:', loggedIn);
-            console.log('username:', username);
+        // Debugging statements
+        console.log('loggedIn:', loggedIn);
+        console.log('username:', username);
 
-            // Check if the user is logged in
-            if (loggedIn !== 'true') {
-                window.location.href = 'index.html'; // Redirect to login page
-            } else {
+        // Check if the user is logged in
+        if (loggedIn !== 'true') {
+            window.location.href = 'index.html'; // Redirect to login page
+        } else {
 
                 // Hide or show content based on username
                 if (username === 'RSP') {

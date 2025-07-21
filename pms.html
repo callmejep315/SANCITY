@@ -8,18 +8,18 @@
     <link rel="icon" type="image/x-icon" href="assets/images/SANCITY.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const loggedIn = sessionStorage.getItem('loggedIn');
-            const username = sessionStorage.getItem('username');
+    document.addEventListener("DOMContentLoaded", function() {
+        const loggedIn = localStorage.getItem('loggedIn');
+        const username = localStorage.getItem('username');
 
-            // Debugging statements
-            console.log('loggedIn:', loggedIn);
-            console.log('username:', username);
+        // Debugging statements
+        console.log('loggedIn:', loggedIn);
+        console.log('username:', username);
 
-            // Check if the user is logged in
-            if (loggedIn !== 'true') {
-                window.location.href = 'index.html'; // Redirect to login page
-            } else {
+        // Check if the user is logged in
+        if (loggedIn !== 'true') {
+            window.location.href = 'index.html'; // Redirect to login page
+        } else {
 
                 // Hide or show content based on username
                 if (username === 'PMS') {
@@ -94,7 +94,7 @@
             <section>
                 <br>
                 <div class="button2-container">
-                    <a href="https://drive.google.com/drive/folders/1V3l2VYqNS3EeaMFl999a10iurX36iDTG" target="_blank"><button>Evidence Requirements for PMS</button></a>
+                    <a href="https://drive.google.com/drive/folders/1V3l2VYqNS3EeaMFl999a10iurX36iDTG" target="_blank"><button>PMS Documents</button></a>
                     <a href="pms-fw.html"><button>PMS Framework</button></a>
                 </div>
                     <hr>

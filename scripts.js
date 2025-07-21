@@ -38,6 +38,7 @@ window.addEventListener('load', function () {
 });
 
 function logout() {
-    sessionStorage.clear();
+    localStorage.removeItem('loggedIn');
+    localStorage.removeItem('username');
     window.location.href = 'index.html';
 }

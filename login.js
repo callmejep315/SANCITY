@@ -19,8 +19,8 @@ function login() {
     );
 
     if (isValid) {
-        sessionStorage.setItem('loggedIn', 'true'); // Set session storage
-        sessionStorage.setItem('username', usernameInput); // Store username
+        localStorage.setItem('loggedIn', 'true');
+        localStorage.setItem('username', usernameInput);
         window.location.href = 'home.html';
     } else {
         document.getElementById('error-message').style.display = 'block';
@@ -29,7 +29,7 @@ function login() {
 
 function loginAsGuest() {
     const guestUsername = 'guest';
-    sessionStorage.setItem('loggedIn', 'true');
-    sessionStorage.setItem('username', guestUsername);
+    localStorage.setItem('loggedIn', 'true');
+    localStorage.setItem('username', guestUsername);
     window.location.href = 'home.html';
 }

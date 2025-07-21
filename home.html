@@ -87,8 +87,8 @@
     </footer>
     <script>
         // Check if the user is logged in
-        if (sessionStorage.getItem('loggedIn') !== 'true') {
-            window.location.href = 'index.html'; // Redirect to login page
+        if (localStorage.getItem('loggedIn') !== 'true') {
+            window.location.href = 'index.html';
         }
     </script>
     <script src="scripts.js"></script>

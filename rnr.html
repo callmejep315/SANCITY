@@ -48,7 +48,7 @@
             <section>
                 <br>
                 <div class="button2-container">
-                    <a href="https://depedph-my.sharepoint.com/:f:/g/personal/jaylord_gallarde_deped_gov_ph/EkQlPz8flMJLomFJbwpPuo4BC9MT8LZ10Z2om4G2KJ5pmA?e=b2hlHc" target="_blank"><button>Evidence Requirements for R&R</button></a>
+                    <a href="https://depedph-my.sharepoint.com/:f:/g/personal/jaylord_gallarde_deped_gov_ph/EkQlPz8flMJLomFJbwpPuo4BC9MT8LZ10Z2om4G2KJ5pmA?e=b2hlHc" target="_blank"><button>R&R Documents</button></a>
                     <a href="assets/images/rnrfw.jpg" target="_blank"><button>R&R Framework</button></a>
                 </div>
                     <hr>
@@ -82,18 +82,18 @@
         </div>
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const loggedIn = sessionStorage.getItem('loggedIn');
-            const username = sessionStorage.getItem('username');
+    document.addEventListener("DOMContentLoaded", function() {
+        const loggedIn = localStorage.getItem('loggedIn');
+        const username = localStorage.getItem('username');
 
-            // Debugging statements
-            console.log('loggedIn:', loggedIn);
-            console.log('username:', username);
+        // Debugging statements
+        console.log('loggedIn:', loggedIn);
+        console.log('username:', username);
 
-            // Check if the user is logged in
-            if (loggedIn !== 'true') {
-                window.location.href = 'index.html'; // Redirect to login page
-            } else {
+        // Check if the user is logged in
+        if (loggedIn !== 'true') {
+            window.location.href = 'index.html'; // Redirect to login page
+        } else {
 
                 // Hide or show content based on username
                 if (username === 'R&R') {
